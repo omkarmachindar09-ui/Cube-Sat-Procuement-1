@@ -120,17 +120,17 @@ For simplicity and portability, data is modeled using **JSON-style nested dictio
 
  
 
-Procurement involves **discrete decisions**:
+Procurement problem aims to **minimize total cost while satisfying**:
 
-- Select or reject a supplier
+- Required component quantities
 
-- Enforce MOQ constraints
+- Lead time constraints
 
-- Cap sourcing percentages
+- Whole-number (integer) purchase decisions
 
  
 
-These cannot be solved using simple linear or greedy approaches.
+
 
  
 
@@ -142,18 +142,17 @@ These cannot be solved using simple linear or greedy approaches.
 
  
 
-### How MILP Works (Conceptual)
+### How ILP Works (Conceptual)
 
  
 
-The solver uses **Branch and Bound**:
+The solver uses **different combinations of suppliers and quantities**:
 
-- Explores solution space as a decision tree
+- It eliminates combinations that violate constraints.
 
-- Prunes infeasible branches early (e.g., lead time exceeds deadline)
+- It calculates total cost for feasible solutions.
 
-- Guarantees a **globally optimal solution** within defined constraints
-
+- It selects the solution with the minimum total cost.
  
 
 ---
