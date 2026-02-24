@@ -30,7 +30,7 @@ In complex manufacturing environments, procurement decisions must balance:
 
  
 
-This project formulates procurement planning as a **Mixed-Integer Linear Programming (MILP)** problem and solves it using Python.
+This project formulates procurement planning as an **Integer Linear Programming (ILP)** problem and solves it using Python.
 
  
 
@@ -116,7 +116,7 @@ For simplicity and portability, data is modeled using **JSON-style nested dictio
 
  
 
-### Why Mixed-Integer Linear Programming (MILP)?
+### Why Integer Linear Programming (ILP)?
 
  
 
